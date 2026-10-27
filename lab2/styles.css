@@ -1,0 +1,41 @@
+/* Fundo geral da página */
+body {
+    background-color: #e0e0e0; /* cinzento claro */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegação */
+nav {
+    background-color: #4CAF50; /* verde */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Seção principal */
+main {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Imagem/banner */
+img {
+    display: block;
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222; /* preto ou quase preto */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}

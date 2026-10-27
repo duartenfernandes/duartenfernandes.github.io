@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cidade - Home</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>A cidade de Roma</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="local.html">Local</a>
+                <a href="multimedia.html">Multimédia</a>
+                <a href="info.html">Informação</a>
+                <img src="images/Roma.png" alt="Vista da cidade" width="600">
+            </nav>           
+        </header>
+        <main>
+            <h2>Informações</h2>
+            <h3 id="tabela">Tabela sobre Roma</h3>
+
+            <style>
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    text-align: left;
+                    font-family: Arial, sans-serif;
+                }
+
+                th {
+                    background-color: #333;
+                    color: #ffffff; /* texto branco */
+                    padding: 10px;
+                }
+
+                td {
+                    background-color: #f9f9f9;
+                    color: #222; /* texto escuro */
+                    padding: 10px;
+                }
+
+                /* Estilizando linhas alternadas */
+                tbody tr:nth-child(even) td {
+                    background-color: #eaeaea;
+                }
+
+                /* Estilizando link */
+                td a {
+                    color: #1a73e8; /* azul Google */
+                    text-decoration: none;
+                }
+
+                td a:hover {
+                    text-decoration: underline;
+                }
+
+                /* Opcional: cor diferente para a coluna do site */
+                td:last-child {
+                    color: #006400; /* verde escuro */
+                }
+            </style>
+
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th colspan="2">Informações Gerais sobre Roma</th>
+                        <th rowspan="2">Website</th>
+                    </tr>
+                    <tr>
+                        <th>Demografia</th>
+                        <th>Geografia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>População: 2.873 milhões (2021)</td>
+                        <td>Área: 1.285 km²</td>
+                        <td><a href="https://www.comune.roma.it/web/it/welcome.page" target="_blank">Câmara Municipal de Roma</a></td>
+                    </tr>
+                    <tr>
+                        <td>Densidade Populacional: 2.237 habitantes/km²</td>
+                        <td>Região: Lácio, Itália</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id="curiosidades">Curiosidades sobre Roma</h3>
+            <div class="curiosidades">
+                <ul>
+                    <li>Roma tem mais de 2.000 anos de história e é conhecida como a "Cidade Eterna".</li>
+                    <li>O Coliseu de Roma é uma das sete maravilhas do mundo moderno e podia abrigar até 50.000 espectadores.</li>
+                    <li>O Vaticano, em Roma, é o menor país do mundo, tanto em área quanto em população.</li>
+                    <li>Segundo a tradição, jogar uma moeda na Fontana di Trevi garante o retorno a Roma.</li>
+                    <li>Roma possui uma das maiores zonas pedonais do mundo, com monumentos e ruínas históricas.</li>
+                </ul>
+            </div>                       
+        </main>
+        <footer>
+            <p>DIW 2026</p>
+        </footer>
+    </body>
+</html>
