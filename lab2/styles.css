@@ -5,15 +5,52 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Barra de navegação */
-nav {
-    background-color: #4CAF50; /* verde */
+/* O contentor do topo (Título + Menu) para ficar todo a verde */
+.header-topo {
+    background-color: #4CAF50; /* Verde */
     color: white;
+    text-align: center;
+    padding: 15px 0 0 0;
+}
+
+
+.header-topo h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Barra de navegação interna (Fundo cinzento escuro/preto conforme a imagem) */
+.menu-navegacao {
+    background-color: #222; 
+    padding: 10px;
+}
+
+.menu-navegacao a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Imagem/Banner único (ocupa a largura total do ecrã ou do bloco) */
+.banner-principal {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Ocupa a largura total sem margens laterais como na foto */
+    height: auto;
+    margin: 0; /* Colado ao menu superior */
+}
+
+/* Barra de navegação */
+/*
+nav {
+    background-color: #4CAF50; 
     padding: 20px;
     text-align: center;
 }
+*/
 
 /* Seção principal */
+/*
 main {
     background-color: white;
     margin: 20px auto;
@@ -22,14 +59,17 @@ main {
     text-align: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+*/
 
 /* Imagem/banner */
+/*
 img {
     display: block;
     max-width: 80%;
     margin: 20px auto;
     border-radius: 8px;
 }
+*/
 
 /* Rodapé */
 footer {
@@ -37,5 +77,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
