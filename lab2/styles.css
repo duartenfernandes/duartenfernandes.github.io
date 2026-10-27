@@ -36,7 +36,8 @@ body {
     display: block;
     width: 100%;
     max-width: 100%; /* Ocupa a largura total sem margens laterais como na foto */
-    height: auto;
+    height: 400px;
+    object-fit: cover;
     margin: 0; /* Colado ao menu superior */
 }
 
