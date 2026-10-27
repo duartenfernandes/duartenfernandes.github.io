@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cidade</title>
+        <style>
+            .fotografias{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        
+            .fotografias img{
+                width: calc((100% - 30px) / 4);
+                height: auto;
+                border-radius: 20px;
+            }
+
+            .poema-container .poema:nth-child(1) {
+                color: darkred;
+                font-weight: bold;
+            }
+
+            .poema-container .poema:nth-child(2) {
+                color: red;
+            }
+
+            .poema-container .poema:nth-child(even) {
+                color: #555;
+                font-style: italic;
+            }
+
+            .poema-container .poema:nth-child(4n) {
+                background-color: #f4f4f4;
+                margin-bottom: 15px; /* Separação visual das estrofes */
+                padding: 5px;
+            }
+
+            .poema-container .poema:nth-child(12) {
+                text-decoration: underline;
+                color: green;
+            }   
+
+        </style>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="header-topo">
+            <h1>A cidade de Roma</h1>
+            <nav class="menu-navegacao">
+                <a href="index.html">Home</a>
+                <a href="local.html">Local</a>
+                <a href="multimedia.html">Multimédia</a>
+                <a href="info.html">Informação</a>
+            </nav>           
+            <img src="images/Roma.png" alt="Vista da cidade" class="banner-principal">      
+        </header>
+
+        <main class="conteudo-principal">
+
+            <h2>Multimédia</h2>
+            <p>Nesta página encontra conteúdos multimédia</p>
+            <section>
+                <h3 id="fotografia">Fotografias</h3>
+                <div class="fotografias">
+                    <img src="images/romax1.jpeg" alt="coliseu">
+                    <img src="images/romax2.jpeg" alt="">
+                    <img src="images/romax3.jpeg" alt="">
+                    <img src="images/romax4.jpeg" alt="">
+                    <img src="images/romax5.jpeg" alt="">
+                    <img src="images/romax6.jpeg" alt="">
+                    <img src="images/romax7.jpeg" alt="">
+                    <img src="images/romax8.jpeg" alt="">
+                </div>
+            </section>
+
+            <section>
+                <h3 id="video">Vídeo</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xqAKamIRBzM?si=_ycvLtIzB348e9f8" title="Rome | The Eternal City" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h3 id="poema">Poesia</h3>
+                <div  class="poema-container">
+                    <p class="poema">Roma, cidade eterna, majestosa e antiga,</p>
+                    <p class="poema">Onde o passado e o presente sempre se liga.</p>
+                    <p class="poema">Das colinas ao rio Tibre que te atravessa,</p>
+                    <p class="poema">Cada esquina guarda uma história que nunca se cessa.</p>
+
+                    <p class="poema">Palácios, ruínas e templos que o tempo desafiou,</p>
+                    <p class="poema">O Coliseu, gigante, tantas vidas celebrou.</p>
+                    <p class="poema">Fontanas e praças, arte em cada estação,</p>
+                    <p class="poema">Roma é poesia viva, inspiração.</p>
+
+                    <p class="poema">E o Vaticano, de fé imensa, lá no al   to,</p>
+                    <p class="poema">Guarda segredos do mundo, no seu asfalto.</p>
+                    <p class="poema">Ó Roma, eterna, de beleza singular,</p>
+                    <p class="poema">Em ti, para sempre, vou me inspirar.</p>
+                </div>
+            </section>
+
+            <p>
+                Ir para: 
+                <a href="#fotografia">Fotografias</a> | 
+                <a href="#video">Vídeo</a> | 
+                <a href="#poesia">Poesia</a>
+            </p>
+
+        </main>
+
+        <footer>
+            <p>DIW 2026</p>
+        </footer>
+    </body>
+</html>

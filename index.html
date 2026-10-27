@@ -2,52 +2,74 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Primeira Página</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
   <header>
     <h1>Primeira Página Web!</h1>
-  </header>
-    <main>
-      <p>Eis a minha primeira página Web!</p>
-      <p>
-          Na Unidade Curricular de
-        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank">
-          Desenvolvimento de Interfaces Web
-        </a>
-          abordaremos as seguintes tecnologias Web &#127760;:
-      </p>
-
+    <nav>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#disciplina">Disciplina</a></li>
       </ul>
-        
-      <p>Iremos criar soluções criativas!</p>
-        <nav>
-          <ul>
-            <li><a href="lab1/index.html">Lab1</a></li>
-            <li><a href="lab2/index.html">Lab2</a></li>
-          </ul>
-        </nav>
-        <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" style="width: 300px;">
-      <section id="sobre">
-      <h2>Sobre mim</h2>
-      <p>O meu nome é Duarte Fernandes e esta é a minha primeira página. 🚀</p>
-      <blockquote>
-        "A Web não é apenas tecnologia, é criatividade e partilha."
-      </blockquote>
-    </section>
-    </main>
+    </nav>
+  </header>
 
-    <footer>
-        <p>Universidade Lusófona © 2026</p>
-    </footer>
+  <!-- Secção Hero Image -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h2>Bem-vindo à Minha Página</h2>
+      <p>Explora o mundo do Desenvolvimento de Interfaces Web 🌍</p>
+      <a href="#projetos" class="btn">Ver Projetos</a>
+    </div>
+  </section>
+
+  <!-- Secção Projetos -->
+ <section id="projetos" class="projetos">
+  <h2>Projetos / Labs</h2>
+  <h3>Alguns exercícios desenvolvidos ao longo da unidade curricular</h3>
+  <div class="cards">
+    <div class="card">
+      <h3>Lab 1</h3>
+      <p>Estrutura base e semântica</p>
+      <a href="lab1/index.html" target="_blank">Lab1</a>
+    </div>
+    <div class="card">
+      <h3>Lab 2</h3>
+      <p>Estilos e layout responsivo</p>
+      <a href="lab2/index.html" target="_blank">Lab2</a>
+    </div>
+    <div class="card">
+      <h3>Lab 3</h3>
+      <p>Interatividade com JS</p>
+      <a href="lab3/index.html" target="_blank">Lab3</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Secção Disciplina -->
+<section id="disciplina" class="disciplina">
+  <div class="disciplina-texto">
+    <h2>Disciplina: Desenvolvimento de Interfaces Web</h2>
+    <p>Na unidade curricular abordaremos as seguintes tecnologias Web:</p>
+    <ul>
+      <li>HTML e CSS</li>
+      <li>JavaScript</li>
+      <li>React & Next.js</li>
+    </ul>
+  </div>
+  <div class="disciplina-img">
+    <img src="images/diw.svg" alt="Wordcloud Interfaces Web">
+  </div>
+</section>
+
+  <footer>
+    <p>Universidade Lusófona © 2026</p>
+  </footer>
 
 </body>
 </html>
