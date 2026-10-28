@@ -27,6 +27,34 @@ button {
 }
 
 
+#caixa {
+    height: 200px;
+    background-color: grey;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.bola {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: tomato;
+}
+
+#pinta {
+  font-weight: bold;
+}
+
+ol li {
+  padding: 8px 0;
+}
+
+
+ol li {
+  margin-bottom: 20px;
+}
+
+
 /* Footer */
 footer {
   text-align: center;

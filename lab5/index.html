@@ -3,156 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratório 5 - JavaScript 2</title>
+    <title>Lab 5</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Bem-vindo ao meu laboratório!</h1>
-    </header>
+    <ol>
+        <li><span id="passa" onmouseover="entra()" onmouseout="sai()">Passe aqui!</span></li>
 
-    <main>
+        <li>
+            <span id="pinta">Pinta-me</span>
+            <button class="color" data-color="red">Red</button>
+            <button class="color" data-color="green">Green</button>
+            <button class="color" data-color="blue">Blue</button>
+        </li>
 
-        <section>
-            <h2 id="passaRato">1. Passa por aqui!</h2>
-        </section>
+        <li>Experimenta escrever... <input id="texto" type="text" onkeyup="mudaCorInput()"></li>
 
-        <section>
-            <h2 id="textoColorido">2. Pinta-me!</h2>
-
-            <button class="color" data-color="purple">Roxo</button>
-            <button class="color" data-color="orange">Laranja</button>
-            <button class="color" data-color="teal">Turquesa</button>
-            <button class="color" data-color="deeppink">Cor-de-rosa</button>
-        </section>
-
-        <section>
-            <h2>3. Experimenta escrever...</h2>
-            <input type="text" id="inputTexto">
-        </section>
-
-
-        <section>
-            <h2>4. Escolha uma cor:
-             <select onchange="document.body.style.backgroundColor = this.value">
+        <li>
+            Escolha uma cor:
+            <select id="corFundo">
                 <option value="white">White</option>
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
+                <option value="lightyellow">Yellow</option>
+                <option value="lightblue">Blue</option>
+                <option value="lavender">Lavender</option>
             </select>
-            </h2>
-        </section>
+        </li>
 
+        <li><button onclick="conta()">Conta!</button> <span id="contador">0</span></li>
 
-        <section>
-            <h2>5. 
-            <button id="botaoConta">Conta!</button>
-            <span id="counter">0</span></h2>
-        </section>
-
-        <script>
-            // --- 5. Conta ---
-
-            // (a) VARIÁVEIS
-            const botaoConta = document.getElementById("botaoConta");
-            const spanCounter = document.getElementById("counter");
-
-            // Tenta obter o valor anterior do Local Storage (ou usa 0 como default)
-            let counter = parseInt(localStorage.getItem("counter")) || 0;
-
-            // Atualiza o elemento que mostra o counter na página ao carregar
-            spanCounter.textContent = counter;
-
-            // (b) EVENT HANDLER
-            function count() {
-                counter++; // incrementa
-                spanCounter.textContent = counter; // atualiza no ecrã
-                localStorage.setItem("counter", counter); // guarda o valor atualizado
-            }
-
-            // (c) EVENT LISTENER
-            botaoConta.addEventListener("click", count);
-           
-        </script>
- 
-        <section>
-            <form>
-                <h2>6. 
-                <input id="nome" type="text" placeholder="Insira o seu nome" required>
-                <input id="idade" type="number" placeholder="Insira a sua idade" required>
-                <input type="submit" value="Submit"></h2>
+        <li>
+            <form id="formUser">
+                <input id="nome" type="text" placeholder="insira o seu nome" required>
+                <input id="idade" type="number" placeholder="idade" required>
+                <input type="submit">
             </form>
-        </section>
+            <p id="mensagem"></p>
+        </li>
 
-        <p id="mensagem"></p> 
+        <li>Automatic Counter: <span id="auto">0</span></li>
+    </ol>
 
-        <script>
-            
-            const form = document.querySelector('form');
-            const nomeInput = document.getElementById('nome');
-            const idadeInput = document.getElementById('idade');
-            const msg = document.getElementById('mensagem');
+    <h2>Flex</h2>
+    
+    <select id="direcao">
+        <option value="row">row</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column">line</option>
+        <option value="column-reverse">line-reverse</option>
+    </select>
 
-            // Função que limpa mensagem e campos
-            function limparCampos() {
-            msg.textContent = '';
-            nomeInput.value = '';
-            idadeInput.value = '';
-            }
+    <div id="caixa">
+        <span class="bola"></span>
+        <span class="bola"></span>
+        <span class="bola"></span>
+        <span class="bola"></span>
+    </div>
 
-            form.onsubmit = function (e) {
-            e.preventDefault(); // não recarregar a página
+    <h2>Contador com localStorage</h2>
+    <p>
+        <button id="dec">-</button>
+        <span id="valor">0</span>
+        <button id="inc">+</button>
+        <button id="reset">Reset</button>
+    </p>
 
-            const nome = nomeInput.value.trim();
-            const idade = idadeInput.value.trim();
-
-            // mostra a mensagem
-            msg.textContent = `Olá, o ${nome} tem ${idade}!`;
-
-            // adiciona um listener para limpar quando o utilizador clicar fora do form
-            setTimeout(() => {
-                const outsideClickHandler = function (ev) {
-                if (!form.contains(ev.target)) {
-                    limparCampos();
-                    document.removeEventListener('click', outsideClickHandler);
-                }
-                };
-                document.addEventListener('click', outsideClickHandler);
-            }, 150);
-            };
-
-        </script>
-  
-        <section>
-            <h2>7. Automatic Counter:
-            <span id="cont"></span></h2>
-        </section>
-        <script>
-            // a. variáveis
-            // elemento do contador
-            const contadorElemento = document.getElementById("cont");
-            // contador começa em 0 sempre que a página é carregada
-            let contador = 0;
-            // mostra o valor inicial
-            contadorElemento.textContent = contador;
-
-            // b. event handler
-            function count() {
-            contador++; // incrementa
-            contadorElemento.textContent = contador;
-            }
-
-            // c. inicialização do intervalo
-            // executa a função count() a cada 1000ms (1 segundo)
-            setInterval(count, 1000);
-        </script>
-    </main>
-
-    <footer>
-        <p>© DIW 2026</p>
-    </footer>
-
-    <!-- HTML já carregado! -->
     <script defer src="scripts/main.js"></script>
 </body>
 </html>
