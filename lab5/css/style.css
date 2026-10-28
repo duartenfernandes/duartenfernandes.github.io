@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: grey;
+}
+
+
+h2 {
+  color: darkblue;
+  font-size: 14px; 
+  padding-top: 1rem;
+}
+
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#textoColorido {
+  font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #fff;
+}
