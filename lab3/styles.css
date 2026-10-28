@@ -8,75 +8,17 @@
 body {
     background-color: #e0e0e0; /* cinzento claro */
     margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* O contentor do topo (Título + Menu) para ficar todo a verde */
-.header-topo {
-    background-color: #4CAF50; /* Verde */
-    color: white;
-    text-align: center;
-    padding: 15px 0 0 0;
+    font-family:Arial, sans-serif;
 }
 
 
-.header-topo h1 {
-    margin: 0;
-    padding-bottom: 10px;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #fff;
 }
-
-/* Barra de navegação interna (Fundo cinzento escuro/preto conforme a imagem) */
-.menu-navegacao {
-    background-color: #222; 
-    padding: 10px;
-}
-
-.menu-navegacao a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-/* Imagem/Banner único (ocupa a largura total do ecrã ou do bloco) */
-.banner-principal {
-    display: block;
-    width: 100%;
-    max-width: 100%; /* Ocupa a largura total sem margens laterais como na foto */
-    height: 400px;
-    object-fit: cover;
-    margin: 0; /* Colado ao menu superior */
-}
-
-/* Barra de navegação */
-/*
-nav {
-    background-color: #4CAF50; 
-    padding: 20px;
-    text-align: center;
-}
-*/
-
-/* Seção principal */
-/*
-main {
-    background-color: white;
-    margin: 20px auto;
-    padding: 30px;
-    width: 80%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-*/
-
-/* Imagem/banner */
-/*
-img {
-    display: block;
-    max-width: 80%;
-    margin: 20px auto;
-    border-radius: 8px;
-}
-*/
 
 /* MENU BASE */
 .menu {
@@ -120,7 +62,7 @@ img {
     width: 100%;
 }
 
-
+/* BOTÃO HAMBÚRGUER */
 .menu-toggle {
     display: none;
     background: none;
@@ -131,11 +73,177 @@ img {
     margin-bottom: 10px;
 }
 
-/* Rodapé */
-footer {
-    background-color: #222; /* preto ou quase preto */
+/* Imagem/Banner único (ocupa a largura total do ecrã ou do bloco) */
+.banner-principal {
+    display: block;
+    width: 100%;
+    max-width: 100%; /* Ocupa a largura total sem margens laterais como na foto */
+    height: 400px;
+    object-fit: cover;
+    margin: 0; /* Colado ao menu superior */
+}
+
+/* Secção principal branca (Conteúdo) */
+.conteudo-principal {
+    background-color: white;
+    margin: 40px auto; /* Margin cria o espaçamento exterior perfeito para a imagem e o footer */
+    padding: 40px;     /* Padding afasta o texto "Home" das bordas brancas */
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Tablets → blocos quadrados */
+@media (max-width: 900px) {
+    .menu-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        background: #333;
+        border-radius: 10px;
+        padding: 15px 20px;
+        flex: 1 1 40%; /* dois blocos por linha */
+        text-align: center;
+    }
+}
+
+/* Telemóveis → menu hambúrguer */
+@media (max-width: 600px) {
+    .menu {
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        display: none; /* escondido por padrão */
+    }
+
+    .menu-links.active {
+        display: flex; /* aparece ao clicar */
+    }
+
+    .menu a {
+        flex: 1;
+        width: 100%;
+        background: #444;
+        border-radius: 5px;
+        padding: 12px;
+    }
+
+    .fotografias{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .fotografias img{
+        width: 150px;
+        border-radius: 20px;
+    }
+   
+    .poema br:nth-child(2) {
+        color: red;
+    }
+
+    .poema-container .poema:nth-child(1) {
+        color: darkred;
+        font-weight: bold;
+    }
+
+    .poema-container .poema:nth-child(even) {
+        color: #555;
+        font-style: italic;
+    }
+
+    .poema-container .poema:nth-child(4n) {
+        background-color: #f4f4f4;
+    }
+
+    .poema-container .poema:nth-child(12) {
+        text-decoration: underline;
+        color: green;
+    }
+}
+
+/* ----------------- SECTIONS ------------------ */
+.section-fotos {
+    background-color: #f0e6f6;
+    padding: 50px 20px;
+}
+
+.section-video {
+    background-color: #e6f6f0;
+    padding: 50px 20px;
+}
+
+.section-poema {
+    background-color: #f6f0e6;
+    padding: 50px 20px;
+}
+
+/* ----------------- IMAGENS ------------------ */
+.fotografias img {
+    width: 200px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fotografias img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* ----------------- SEÇÃO POEMA ------------------ */
+
+.poema-container {
+    text-align: center;     
+    max-width: 800px;      
+    margin: 0 auto;        
+}   
+
+.poema {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+    
+
+/* ----------------- SEÇÃO EMBLEMÁTICA ------------------ */
+.section-emblematica {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-emblematica img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 70vh; 
+    transition: transform 0.5s ease;
+}
+
+.section-emblematica img:hover {
+    transform: scale(1.05);
+}
+
+.frase-emblematica {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    font-size: 5vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }

@@ -72,6 +72,16 @@ img {
 }
 */
 
+/* Secção principal branca (Conteúdo) */
+.conteudo-principal {
+    background-color: white;
+    margin: 40px auto; /* Margin cria o espaçamento exterior perfeito para a imagem e o footer */
+    padding: 40px;     /* Padding afasta o texto "Home" das bordas brancas */
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
 /* Rodapé */
 footer {
     background-color: #222; /* preto ou quase preto */
