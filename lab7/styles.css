@@ -9,19 +9,16 @@ header {
   background: #800080;
   color: #ddd;
   padding: 0.5em 2em;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* logo | título | nav */
+  display: flex;
   align-items: center;
+  justify-content: space-between; 
 }
 
-header img {
-  height: 60px;     /* limita o tamanho do logótipo */
-  width: auto;
-}
+
 
 header h1 {
   font-size: 1.6rem;
-  text-align: center;
+  text-align: left;
 }
 
 nav ul {
