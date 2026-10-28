@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Fundo geral da página */
 body {
     background-color: #e0e0e0; /* cinzento claro */
@@ -71,6 +77,59 @@ img {
     border-radius: 8px;
 }
 */
+
+/* MENU BASE */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    padding: 10px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: tomato;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: tomato;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
 
 /* Rodapé */
 footer {
