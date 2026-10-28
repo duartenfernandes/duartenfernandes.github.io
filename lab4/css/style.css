@@ -1,0 +1,45 @@
+body {
+  background-color: lavender;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: grey;
+}
+
+
+h2 {
+  color: darkblue;
+  font-size: 14px; 
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#textoColorido {
+  font-weight: bold;
+}
+
+#foto {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #fff;
+}

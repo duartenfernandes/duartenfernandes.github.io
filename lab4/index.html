@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório 4 - Eventos JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo ao meu laboratório!</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2 id="passaRato">1. Passa por aqui!</h2>
+        </section>
+
+
+        <section>
+            <h2 id="textoColorido">2. Pinta-me!
+            <button onclick="mudarCor('red')">Red</button>
+            <button onclick="mudarCor('green')">Green</button>
+            <button onclick="mudarCor('blue')">Blue</button></h2>
+        </section>
+
+
+        <section>
+            <h2>3. Experimenta escrever...
+            <input type="text" id="inputTexto"></h2>
+        </section>
+
+
+        <section>
+            <h2>4. Escolha uma cor em inglês:
+            <input type="text" id="corEscolhida">
+            <button onclick="submeterCor()">Submeter</button></h2>
+        </section>
+
+
+        <section>
+            <h2>5. 
+            <button id="botaoConta" onclick="incrementarContador()">Conta!</button>
+            <span id="contador">33</span></h2>
+        </section>
+
+ 
+        <section>
+            <h2>6. Imagem</h2>
+            <img src="images/fotografia.png" id="foto" alt="Fotografia"
+                onmouseover="ampliarImagem()" onmouseout="reduzirImagem()">
+        </section>
+    </main>
+
+    <footer>
+        <p>© DIW 2025</p>
+    </footer>
+
+    <!-- HTML já carregado! -->
+    <script defer src="scripts/main.js"></script>
+</body>
+</html>
